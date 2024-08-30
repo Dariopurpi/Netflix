@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+}
+
+img {
+  width: 40px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: end;
+  width: 70vw;
+}
+
+li img {
+  width: 30px;
+  margin: 0 12px 0 12px;
+}
