@@ -2,12 +2,6 @@
   width: 390px;
 }
 
-.card {
-  display: flex;
-  overflow: auto;
-  padding: 14px;
-}
-
 .cardContent {
   width: 120px;
   margin-right: 15px;

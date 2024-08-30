@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import Card from "./components/Card";
-import "./App.css";
+import "../style/HomePage.css";
 // import Filter from "./components/Filter";
-import Banner from "./components/Banner";
-import Navbar from "./components/Navbar";
+import Banner from "../components/Banner";
+import Navbar from "../components/Navbar";
+import CardsCarousel from "../components/CardsCarousel";
 
 function App() {
   const [data, setData] = useState([]);
@@ -64,8 +64,9 @@ function App() {
         data={data}
         setOption={(optionFromChild) => setOption(optionFromChild)}
       /> */}
-      <Card data={dataToRender} sectionTitle="film da vedere" />
-      <Card data={dataToRenderSerie} sectionTitle="nuove serie tv" />
+      <CardsCarousel data={dataToRender} sectionTitle="film da vedere" />
+
+      <CardsCarousel data={dataToRenderSerie} sectionTitle="nuove serie tv" />
     </>
   );
 }

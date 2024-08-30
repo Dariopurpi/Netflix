@@ -1,5 +1,9 @@
 .navbar {
   display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  width: 95%;
+  /* margin: auto; */
 }
 
 img {
@@ -10,10 +14,9 @@ ul {
   display: flex;
   list-style-type: none;
   justify-content: end;
-  width: 70vw;
 }
 
 li img {
   width: 30px;
-  margin: 0 12px 0 12px;
+  margin: 4px;
 }

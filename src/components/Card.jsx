@@ -1,26 +1,21 @@
 import { useState, useEffect } from "react";
 import "./Card.css";
+import { Link } from "react-router-dom";
 
-function Card({ data, sectionTitle }) {
+function Card({ item }) {
   return (
-    <>
-      <div className="cardWrap">
-        <h2>{sectionTitle}</h2>
-        <div className="card">
-          {data?.map((item) => (
-            <div className="cardContent">
-              <img
-                src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
-                alt={item.overview}
-              />
-              <h3>{item.title}</h3>
-              <h3>{item.original_name}</h3>
-              {/* <p>{item.overview}</p> */}
-            </div>
-          ))}
+    <Link to={`/${item.id}`}>
+      <div className="card">
+        <div className="cardContent">
+          <img
+            src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
+            alt={item.overview}
+          />
+          <h3>{item.title}</h3>
+          <h3>{item.original_name}</h3>
         </div>
       </div>
-    </>
+    </Link>
   );
 }
 
