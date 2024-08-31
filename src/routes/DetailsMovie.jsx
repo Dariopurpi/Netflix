@@ -26,11 +26,11 @@ function DetailsMovie() {
   console.log(data);
   return (
     <>
-      <h1>{data?.title}</h1>
       <img
         src={`https://image.tmdb.org/t/p/w500/${data?.poster_path}`}
         alt={data?.overview}
-      />
+      />{" "}
+      <h1>{data?.title}</h1>
       <p>{data?.overview}</p>
     </>
   );
