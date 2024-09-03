@@ -2,9 +2,11 @@ import { useEffect } from "react";
 import "../style/DetailsMovie.scss";
 import { useActionData, useParams } from "react-router-dom";
 import { useState } from "react";
+import Navbar from "../components/Navbar";
+import CardDetailsMovie from "../components/CardDetailsMovie";
 
 function DetailsMovie() {
-  const { ID } = useParams();
+  let { ID } = useParams();
 
   const [data, setData] = useState();
 
@@ -18,21 +20,17 @@ function DetailsMovie() {
       },
     };
 
-    fetch(`https://api.themoviedb.org/3/movie/${ID}?language=en-US`, options)
+    fetch(`https://api.themoviedb.org/3/movie/${ID}?language=it-IT`, options)
       .then((response) => response.json())
       .then((response) => setData(response))
       .catch((err) => console.error(err));
   }, []);
-  console.log(data);
+  // console.log(data);
   return (
-    <div className="detailsMovie">
-      <img
-        src={`https://image.tmdb.org/t/p/w500/${data?.poster_path}`}
-        alt={data?.overview}
-      />{" "}
-      <h1>{data?.title}</h1>
-      <p>{data?.overview}</p>
-    </div>
+    <>
+      <Navbar />
+      <CardDetailsMovie dataSingleFilm={data} />
+    </>
   );
 }
 

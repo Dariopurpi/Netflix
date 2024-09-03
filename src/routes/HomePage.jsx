@@ -22,7 +22,7 @@ function App() {
     };
 
     fetch(
-      "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",
+      "https://api.themoviedb.org/3/movie/popular?language=it-IT&page=1",
       options
     )
       .then((response) => response.json())
@@ -39,7 +39,7 @@ function App() {
     };
 
     fetch(
-      "https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1",
+      "https://api.themoviedb.org/3/tv/popular?language=it-IT&page=1",
       options
     )
       .then((response) => response.json())
@@ -53,7 +53,7 @@ function App() {
     } else {
       setDataToRender(data.filter((item) => item.category === option));
     }
-    console.log(data);
+    // console.log(data);
   }, [option, data]);
 
   return (
