@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "../style/HomePage.css";
+import "../style/HomePage.scss";
 // import Filter from "./components/Filter";
 import Banner from "../components/Banner";
 import Navbar from "../components/Navbar";

@@ -1,4 +1,4 @@
-import "./Banner.css";
+import "../style/Banner.scss";
 function Banner() {
   return (
     <div className="container">

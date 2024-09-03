@@ -1,0 +1,9 @@
+.cardContent {
+  width: 120px;
+  margin-right: 15px;
+  img {
+    width: inherit;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}

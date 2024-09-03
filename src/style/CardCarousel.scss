@@ -1,0 +1,13 @@
+.cardCarousel {
+  width: 100%;
+  h2 {
+    text-transform: capitalize;
+    margin: 10px;
+    color: white;
+  }
+  .cardContainer {
+    display: flex;
+    overflow: auto;
+    padding: 14px;
+  }
+}

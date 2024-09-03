@@ -1,6 +1,6 @@
 import Card from "./Card";
 import { Link } from "react-router-dom";
-import "../style/CardCarousel.css";
+import "../style/CardCarousel.scss";
 
 function CardsCarousel({ data, sectionTitle }) {
   return (

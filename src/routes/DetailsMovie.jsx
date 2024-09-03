@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "../style/DetailsMovie.css";
+import "../style/DetailsMovie.scss";
 import { useActionData, useParams } from "react-router-dom";
 import { useState } from "react";
 
@@ -25,14 +25,14 @@ function DetailsMovie() {
   }, []);
   console.log(data);
   return (
-    <>
+    <div className="detailsMovie">
       <img
         src={`https://image.tmdb.org/t/p/w500/${data?.poster_path}`}
         alt={data?.overview}
       />{" "}
       <h1>{data?.title}</h1>
       <p>{data?.overview}</p>
-    </>
+    </div>
   );
 }
 
