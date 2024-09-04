@@ -1,20 +1,22 @@
-import { useState, useEffect } from "react";
 import "../style/Card.scss";
 import { Link } from "react-router-dom";
 
-function Card({ item }) {
+function Card({ data }) {
+  // console.log(data);
   return (
-    <Link to={`/${item?.id}`}>
-      <div className="card">
-        <div className="cardContent">
-          <img
-            src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
-            alt={item?.overview}
-          />
-          <h3>{item?.title}</h3>
-          <h3>{item?.original_name}</h3>
+    <Link to={`/${data?.id}`}>
+      {data && (
+        <div className="card">
+          <div className="cardContent">
+            <img
+              src={`https://image.tmdb.org/t/p/w500/${data?.poster_path}`}
+              alt={data?.overview}
+            />
+            <h3>{data?.title}</h3>
+            <h3>{data?.original_name}</h3>
+          </div>
         </div>
-      </div>
+      )}
     </Link>
   );
 }

@@ -1,15 +1,26 @@
 import { useState, useEffect } from "react";
 import "../style/HomePage.scss";
-// import Filter from "./components/Filter";
+import Filter from "../components/Filter";
 import Banner from "../components/Banner";
 import Navbar from "../components/Navbar";
 import CardsCarousel from "../components/CardsCarousel";
+import Modal from "../components/modal";
 
 function App() {
   const [data, setData] = useState([]);
-  const [option, setOption] = useState("all");
+
   const [dataToRender, setDataToRender] = useState([]);
   const [dataToRenderSerie, setDataToRenderSerie] = useState([]);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   useEffect(() => {
     const options = {
@@ -26,7 +37,7 @@ function App() {
       options
     )
       .then((response) => response.json())
-      .then((response) => setData(response.results))
+      .then((response) => setDataToRender(response.results))
       .catch((err) => console.error(err));
 
     const optionsSerie = {
@@ -46,24 +57,22 @@ function App() {
       .then((response) => setDataToRenderSerie(response.results))
       .catch((err) => console.error(err));
   }, []);
-
-  useEffect(() => {
-    if (option === "all") {
-      setDataToRender(data);
-    } else {
-      setDataToRender(data.filter((item) => item.category === option));
-    }
-    // console.log(data);
-  }, [option, data]);
-
+  console.log(dataToRender);
   return (
     <>
+      <div className="App">
+        <h1>Gestore di Modali in React</h1>
+        <button onClick={openModal}>Apri Modale</button>
+        <Modal
+          data={dataToRender}
+          show={isModalOpen}
+          handleClose={closeModal}
+        />
+      </div>
       <Navbar />
       <Banner />
-      {/* <Filter
-        data={data}
-        setOption={(optionFromChild) => setOption(optionFromChild)}
-      /> */}
+
+      {/* <Filter data={dataToRender} /> */}
       <CardsCarousel data={dataToRender} sectionTitle="film da vedere" />
 
       <CardsCarousel data={dataToRenderSerie} sectionTitle="nuove serie tv" />
