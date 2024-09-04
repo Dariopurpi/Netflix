@@ -9,7 +9,7 @@ function CardsCarousel({ data, sectionTitle }) {
         <h2>{sectionTitle}</h2>
         <div className="cardContainer">
           {data?.map((item) => (
-            <Link>
+            <Link key={item.id}>
               <Card item={item} />
             </Link>
           ))}

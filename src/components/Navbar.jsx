@@ -1,16 +1,19 @@
 import "../style/Navbar.scss";
+import logoNetflix from "../assets/netflix-logo-icon.svg";
+import logoDownload from "../assets/download.png";
+import logoSearch from "../assets/search.png";
 
 function Navbar() {
   return (
     <>
       <div className="navbar">
-        <img src="../../public/netflix-logo-icon.svg" alt="logo netflix" />
+        <img src={logoNetflix} alt="logo netflix" />
         <ul>
           <li>
-            <img src="../../public/icons8-scaricare-32.png" alt="" />
+            <img src={logoDownload} alt="logo download" />
           </li>
           <li>
-            <img src="../../public/icons8-ricerca-50.png" alt="" />
+            <img src={logoSearch} alt="logo search" />
           </li>
         </ul>
       </div>
