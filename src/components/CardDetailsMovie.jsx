@@ -37,7 +37,7 @@ function CardDetailsMovie() {
         ))}
       </span>
       <button id="favourite">Aggiungi ai preferiti</button>
-      <p>{dataSingleFilm?.overview}</p>
+      <p className="detailsMovieDescription">{dataSingleFilm?.overview}</p>
     </div>
   );
 }
