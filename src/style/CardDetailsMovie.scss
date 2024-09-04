@@ -1,0 +1,59 @@
+.detailsMovie {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    border: 1px solid gray;
+
+    h1 {
+        color: white;
+        padding: 8px 6px 10px 6px;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+        // height: auto;
+    }
+
+    p {
+        padding: 8px 15px 10px 15px;
+
+    }
+
+    #favourite {
+        background-color: white;
+        color: black;
+        width: 90%;
+        padding: 12px;
+        font-weight: bold;
+        border-radius: 6px;
+        border: none;
+        display: block;
+        margin: 0 auto;
+
+    }
+
+    .genres {
+        display: flex;
+        justify-content: space-evenly;
+
+
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .detailsMovie {
+        border: 1px solid red;
+        width: 100%;
+
+        #favourite {}
+
+        img {
+            width: 100%;
+            height: 600px;
+            object-fit: contain;
+        }
+    }
+}
