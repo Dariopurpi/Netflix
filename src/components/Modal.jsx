@@ -3,7 +3,7 @@ import Filter from "./Filter";
 
 const Modal = ({ show, handleClose, data }) => {
   if (!show) return null;
-
+  console.log(data);
   return (
     <>
       <div className="modal">
@@ -11,8 +11,7 @@ const Modal = ({ show, handleClose, data }) => {
           <span className="close" onClick={handleClose}>
             &times;
           </span>
-          <h2>Questo è il contenuto della modale</h2>
-          <p>Puoi inserire qualsiasi contenuto qui.</p>
+          <h2>Cerca film per nome</h2>
         </div>
       </div>
       <Filter data={data} />
