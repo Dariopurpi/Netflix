@@ -1,5 +1,4 @@
 import Card from "./Card";
-import FilterCard from "./filterCard";
 import { useState } from "react";
 
 function Filter(data) {
