@@ -4,7 +4,7 @@ import logoNetflix from "../assets/netflix-logo-icon.svg";
 import logoDownload from "../assets/download.png";
 import logoSearch from "../assets/search.png";
 import home from "../assets/home.png";
-import Modal from "../components/modal";
+import Modal from "../components/Modal";
 import { Link } from "react-router-dom";
 
 function Navbar({ data }) {
