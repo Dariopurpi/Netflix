@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Filter from "./Filter";
 
 const Modal = ({ show, handleClose, data }) => {
